@@ -46,11 +46,25 @@ const SalesPrediction = () => {
   const [nextMonthPrediction, setNextMonthPrediction] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [salesHistory, setSalesHistory] = useState([]);
   const [showDropdown, setShowDropdown] = useState(false);
+  const [predictValue, setPredictValue] = useState();
 
   useEffect(() => {
     calculateOverallSales();
+    fetchSalesHistory();
   }, []);
+
+  const fetchSalesHistory = async () => {
+    try {
+      const response = await axios.get(
+        "http://localhost:3000/api/salesHistory/get"
+      );
+      setSalesHistory(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const calculateOverallSales = () => {
     const totalSales = sampleSalesData.reduce(
@@ -82,6 +96,20 @@ const SalesPrediction = () => {
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
     setShowDropdown(true);
+  };
+
+  const calculatePredict = async (productName, salesData) => {
+    try {
+      const response = await axios.post("http://localhost:2002/predict", {
+        product_name: productName,
+        sales_data: salesData.map(Number),
+      });
+
+      console.log(response.data.prediction[0]);
+      setPredictValue(response.data.prediction[0]);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleItemSelect = async (item) => {
@@ -353,6 +381,36 @@ const SalesPrediction = () => {
         </motion.div>
       </div>
 
+      <div className="p-4">
+        <h1 className="text-2xl font-bold mb-4">Sales History</h1>
+        {salesHistory.map((record) => (
+          <div key={record._id} className="mb-6 p-4 border rounded shadow-sm">
+            <h2 className="text-xl font-semibold text-blue-700 flex justify-between items-center">
+              {record.categoryName}
+              <button
+                className="ml-4 px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600"
+                onClick={() =>
+                  calculatePredict(
+                    record.categoryName,
+                    record.sales.map((s) => s.sale)
+                  )
+                }
+              >
+                Predict
+              </button>
+            </h2>
+            <ul className="list-disc ml-6 mt-2">
+              {record.sales.map((sale, index) => (
+                <li key={index}>
+                  <span className="font-medium">{sale.month}:</span> {sale.sale}
+                </li>
+              ))}
+            </ul>
+            Prediction Value: {predictValue}
+          </div>
+        ))}
+      </div>
+
       {/* Selected Item Details */}
       <AnimatePresence>
         {selectedItem && (
@@ -409,7 +467,7 @@ const SalesPrediction = () => {
               {/* Item History */}
               <div className="w-full md:w-1/2 mt-4 md:mt-0">
                 <h3 className="text-xl font-semibold mb-2 text-[#a98467]">
-                  Sales History
+                  Sales Historyy
                 </h3>
                 <div className="overflow-x-auto">
                   <table className="w-full text-left">

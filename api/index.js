@@ -15,10 +15,9 @@ import fs from "fs";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 
-//dewni
 import inventoryRouter from "./routes/inventory.routs.js";
 
-//shadini
+import salesHistoryRoute from "./routes/saleshistory.route.js";
 import promotionRouter from "./routes/promotion.routes.js";
 
 dotenv.config();
@@ -45,7 +44,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["https://fashio-nexus.vercel.app/"],
+    origin: ["http://localhost:5173"],
     methods: ["GET", "POST"],
     credentials: true,
   })
@@ -82,13 +81,12 @@ const __dirname = dirname(fileURLToPath(import.meta.url)); // Get directory name
 app.use("/uploads", express.static(join(__dirname, "uploads")));
 
 app.use("/api/auth", authRouter);
-
+app.use("/api/salesHistory", salesHistoryRoute);
 app.use("/api/user", userRouter);
 app.use("/api/discount", discountRouter);
 app.use("/api/order", orderRouter);
 // Use OTP routes
 
-//dewni
 app.use("/api/inventories", inventoryRouter);
 
 // Use OTP routes
