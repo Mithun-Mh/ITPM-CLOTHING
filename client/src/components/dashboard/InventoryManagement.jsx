@@ -40,14 +40,14 @@ export default function InventoryManagement() {
   return (
     <motion.div
       className="p-10 pl-16 pr-1 min-h-screen"
-      style={{ backgroundColor: "#f5ebe0" }} // PrimaryColor for background
+      style={{ backgroundColor: "#b8e2ff" }} // PrimaryColor for background
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
       <h1
         className="text-3xl font-bold mb-2"
-        style={{ color: "#a98467" }} // ExtraDarkColor for the main heading
+        style={{ color: "#094371" }} // ExtraDarkColor for the main heading
       >
         Inventory Management
       </h1>
@@ -55,15 +55,15 @@ export default function InventoryManagement() {
       {/* Tab Navigation */}
       <div
         className="flex space-x-4 border-b-2 mb-4"
-        style={{ borderColor: "#e3d5ca" }} // SecondaryColor for the border
+        style={{ borderColor: "#094371" }} // SecondaryColor for the border
       >
         <div
           className={`cursor-pointer px-4 py-2 -mb-1 ${
             activeTab === "all" ? "border-b-4" : "text-gray-500"
           }`}
           style={{
-            borderColor: activeTab === "all" ? "#d4a373" : "transparent", // DarkColor for active tab border
-            color: activeTab === "all" ? "#d4a373" : "#a98467", // DarkColor for active tab text, ExtraDarkColor for inactive
+            borderColor: activeTab === "all" ? "#094371" : "transparent", // DarkColor for active tab border
+            color: activeTab === "all" ? "#094371" : "#20a9fe", // DarkColor for active tab text, ExtraDarkColor for inactive
           }}
           onClick={() => setActiveTab("all")}
         >
@@ -74,7 +74,7 @@ export default function InventoryManagement() {
             activeTab === "add" ? "border-b-4" : "text-gray-500"
           }`}
           style={{
-            borderColor: activeTab === "add" ? "#d4a373" : "transparent",
+            borderColor: activeTab === "add" ? "#094371" : "transparent",
             color: activeTab === "add" ? "#d4a373" : "#a98467",
           }}
           onClick={() => setActiveTab("add")}
