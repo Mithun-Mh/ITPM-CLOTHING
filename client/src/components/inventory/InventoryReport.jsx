@@ -44,11 +44,11 @@ export default function InventoryReport({ inventory }) {
     const date = Date().split(" "); // Gets the current date and formats it as a string (MM-DD-YYYY).
     const dateStr = date[1] + "-" + date[2] + "-" + date[3];
 
-    // const logo = new Image();
-    // logo.src = "../../assets/img/Logo14.png";
+     const logo = new Image();
+    logo.src = "../../assets/img/logo-removebg-preview.png";
 
     doc.setFontSize(28).setFont("Mooli", "bold").setTextColor(169, 132, 109);
-    doc.text("FashioNexus", 80, 15);
+    doc.text("FashionWanderWear", 80, 15);
 
     doc.setFont("helvetica", "normal").setFontSize(20).setTextColor(0, 0, 0);
     doc.text("Inventory Details Report", 65, 25);
@@ -60,7 +60,7 @@ export default function InventoryReport({ inventory }) {
       .setFont("courier", "normal")
       .setFontSize(12)
       .setTextColor(150, 150, 150);
-    doc.text("FashioNexus.co, Galle Road, Colombo, Sri lanka", 50, 45);
+    doc.text("FashionWanderWear.co, Galle Road, Colombo, Sri lanka", 50, 45);
 
     doc
       .setFont("courier", "normal")
