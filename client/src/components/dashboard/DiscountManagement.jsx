@@ -82,14 +82,14 @@ export default function DiscountManagement() {
     <div>
       <motion.div
         className="p-10 pl-20 min-h-screen"
-        style={{ backgroundColor: "#f5ebe0" }} // PrimaryColor for background
+        style={{ backgroundColor: "#b8e2ff" }} // PrimaryColor for background
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
         <motion.h1
           className="text-4xl font-bold mb-2"
-          style={{ color: "#a98467" }} // ExtraDarkColor for the main heading
+          style={{ color: "#094371" }} // ExtraDarkColor for the main heading
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -100,7 +100,7 @@ export default function DiscountManagement() {
         {/* Tab Navigation */}
         <div
           className="flex space-x-4 border-b-2 mb-4"
-          style={{ borderColor: "#e3d5ca" }} // SecondaryColor for the border
+          style={{ borderColor: "#094371" }} // SecondaryColor for the border
         >
           <motion.div
             className={`cursor-pointer px-4 py-2 -mb-1 ${
@@ -108,7 +108,7 @@ export default function DiscountManagement() {
             }`}
             style={{
               borderColor: activeTab === "product" ? "#d4a373" : "transparent", // DarkColor for active tab border
-              color: activeTab === "product" ? "#d4a373" : "#a98467", // DarkColor for active tab text, ExtraDarkColor for inactive
+              color: activeTab === "product" ? "#d4a373" : "#094371", // DarkColor for active tab text, ExtraDarkColor for inactive
             }}
             onClick={() => setActiveTab("product")}
             variants={tabHoverEffect}
@@ -125,7 +125,7 @@ export default function DiscountManagement() {
             style={{
               borderColor:
                 activeTab === "discounts" ? "#d4a373" : "transparent",
-              color: activeTab === "discounts" ? "#d4a373" : "#a98467",
+              color: activeTab === "discounts" ? "#d4a373" : "#094371",
             }}
             onClick={() => setActiveTab("discounts")}
             variants={tabHoverEffect}

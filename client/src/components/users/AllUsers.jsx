@@ -122,16 +122,16 @@ const AllUsers = () => {
       .setFont("helvetica", "normal")
       .setFontSize(28)
       .setTextColor(169, 132, 109);
-    doc.text("FashioNexus", 105, 20, { align: "center" });
+    doc.text("Fashio Wander Wear", 105, 20, { align: "center" });
 
     doc.setFont("helvetica", "normal").setFontSize(18).setTextColor(0, 0, 0);
     doc.text("User Details Report", 105, 30, { align: "center" });
 
-    // Subheader
-    doc.setFontSize(10).setTextColor(100, 100, 100);
-    doc.text("FashioNexus.co, Galle Road, Colombo, Sri Lanka", 105, 38, {
-      align: "center",
-    });
+    // // Subheader
+    // doc.setFontSize(10).setTextColor(100, 100, 100);
+    // doc.text("FashioWanderWear.co, Galle Road, Colombo, Sri Lanka", 105, 38, {
+    //   align: "center",
+    // });
 
     // Separator line
     doc.setDrawColor(200, 200, 200);
@@ -230,7 +230,7 @@ const AllUsers = () => {
     }
 
     // Save the PDF
-    doc.save("FashioNexus_User_Report.pdf");
+    doc.save("FashionWanderWear_User_Report.pdf");
   };
 
   const handleDownload = () => {
@@ -267,7 +267,7 @@ const AllUsers = () => {
       { name: "Managers", value: userCounts.managers },
       { name: "Customers", value: userCounts.customers },
     ];
-    const COLORS = ["#d4a373", "#a98467"];
+    const COLORS = ["#d4a373", "#094371"];
 
     return (
       <motion.div
@@ -373,14 +373,14 @@ const AllUsers = () => {
           </select>
           <button
             onClick={handleDownload}
-            className="flex items-center bg-[#d4a373] text-white px-4 py-2 rounded-lg hover:bg-[#a98467] transition duration-300 shadow-md"
+            className="flex items-center bg-[#d4a373] text-white px-4 py-2 rounded-lg hover:bg-[#094371 ] transition duration-300 shadow-md"
           >
             <FaDownload className="mr-2" />
             Download Report
           </button>
           <button
             onClick={() => setIsAddUserOpen(true)}
-            className="flex items-center bg-[#d4a373] text-white px-4 py-2 rounded-lg hover:bg-[#a98467] transition duration-300 shadow-md"
+            className="flex items-center bg-[#d4a373] text-white px-4 py-2 rounded-lg hover:bg-[#094371 ] transition duration-300 shadow-md"
           >
             <FaUserPlus className="mr-2" />
             Add User

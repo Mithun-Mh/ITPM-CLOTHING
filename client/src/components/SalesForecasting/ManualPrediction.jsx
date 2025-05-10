@@ -104,7 +104,7 @@ const ManualPrediction = () => {
 
     doc.setFont("helvetica", "bold");
     doc.setFontSize(16);
-    doc.setTextColor("#a98467");
+    doc.setTextColor("#094371");
     doc.text("Manual Prediction Report", pageWidth / 2, margin + 10, {
       align: "center",
     });
@@ -126,7 +126,7 @@ const ManualPrediction = () => {
       head: [["Month", "Sales"]],
       body: tableData,
       theme: "striped",
-      styles: { fillColor: "#f5ebe0", textColor: "#a98467", fontSize: 10 },
+      styles: { fillColor: "#f5ebe0", textColor: "#094371", fontSize: 10 },
       headStyles: { fillColor: "#d4a373", textColor: "#ffffff", fontSize: 10 },
       margin: { left: margin, right: margin },
       tableWidth: contentWidth,
@@ -137,17 +137,17 @@ const ManualPrediction = () => {
 
   return (
     <div className="bg-[#f5ebe0] p-6 rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold mb-4 text-[#a98467]">
+      <h2 className="text-2xl font-bold mb-4 text-[#094371]">
         Manual Prediction
       </h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label className="block text-[#a98467] mb-2">Product Name</label>
+          <label className="block text-[#094371] mb-2">Product Name</label>
           <input
             type="text"
             value={productName}
             onChange={(e) => setProductName(e.target.value)}
-            className="w-full p-2 border rounded bg-[#e3d5ca] text-[#a98467]"
+            className="w-full p-2 border rounded bg-[#e3d5ca] text-[#094371]"
             required
             placeholder="Enter product name"
           />
@@ -155,12 +155,12 @@ const ManualPrediction = () => {
         <div className="grid grid-cols-6 gap-4">
           {months.map((month, index) => (
             <div key={month}>
-              <label className="block text-[#a98467] mb-1">{month}</label>
+              <label className="block text-[#094371] mb-1">{month}</label>
               <input
                 type="number"
                 value={salesData[index]}
                 onChange={(e) => handleInputChange(index, e.target.value)}
-                className="w-full p-2 border rounded bg-[#e3d5ca] text-[#a98467]"
+                className="w-full p-2 border rounded bg-[#e3d5ca] text-[#094371]"
                 required
                 min="1" // HTML5 min attribute for basic validation
                 max="30000" // HTML5 max attribute for basic validation
@@ -171,7 +171,7 @@ const ManualPrediction = () => {
         </div>
         <button
           type="submit"
-          className="w-full py-2 bg-[#d4a373] text-white rounded hover:bg-[#a98467]"
+          className="w-full py-2 bg-[#d4a373] text-white rounded hover:bg-[#094371]"
         >
           Predict
         </button>
@@ -187,19 +187,19 @@ const ManualPrediction = () => {
           className="mt-6"
         >
           <div className="flex justify-between items-center mb-4">
-            <h3 className="text-xl font-semibold text-[#a98467]">
+            <h3 className="text-xl font-semibold text-[#094371]">
               Prediction Result
             </h3>
             <div>
               <button
                 onClick={() => setShowDetails(false)}
-                className="bg-[#d4a373] text-white p-2 rounded-full hover:bg-[#a98467] transition-colors mr-2"
+                className="bg-[#d4a373] text-white p-2 rounded-full hover:bg-[#094371] transition-colors mr-2"
               >
                 <X size={20} />
               </button>
               <button
                 onClick={generateReport}
-                className="bg-[#d4a373] text-white p-2 rounded-full hover:bg-[#a98467] transition-colors"
+                className="bg-[#d4a373] text-white p-2 rounded-full hover:bg-[#094371] transition-colors"
               >
                 <Download size={20} />
               </button>
@@ -212,7 +212,7 @@ const ManualPrediction = () => {
             <>
               <div className="flex flex-col md:flex-row">
                 <div className="w-full md:w-1/2 pr-4">
-                  <h4 className="text-lg font-semibold mb-2 text-[#a98467]">
+                  <h4 className="text-lg font-semibold mb-2 text-[#094371]">
                     Product Details
                   </h4>
                   <p className="text-[#d4a373]">Product Name: {productName}</p>
@@ -222,7 +222,7 @@ const ManualPrediction = () => {
                   </p>
                 </div>
                 <div className="w-full md:w-1/2 mt-4 md:mt-0">
-                  <h4 className="text-lg font-semibold mb-2 text-[#a98467]">
+                  <h4 className="text-lg font-semibold mb-2 text-[#094371]">
                     Sales History
                   </h4>
                   <div className="overflow-x-auto">
@@ -249,8 +249,8 @@ const ManualPrediction = () => {
                 <ResponsiveContainer width="100%" height="100%">
                   <LineChart data={getChartData()}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#d4a373" />
-                    <XAxis dataKey="month" stroke="#a98467" />
-                    <YAxis stroke="#a98467" />
+                    <XAxis dataKey="month" stroke="#094371" />
+                    <YAxis stroke="#094371" />
                     <Tooltip
                       contentStyle={{
                         backgroundColor: "#f5ebe0",

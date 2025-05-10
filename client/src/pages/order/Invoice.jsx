@@ -25,10 +25,10 @@ const Invoice = ({ expandedOrders }) => {
 
           {/* Company Details */}
           <View style={styles.companyInfo}>
-            <Text style={styles.companyName}>FashioNexus</Text>
+            <Text style={styles.companyName}>Fashion Wander Wear</Text>
             <Text style={styles.companyDetails}>Sapugaskanda</Text>
             <Text style={styles.companyDetails}>
-              Email: fashionexus@gmail.com
+              Email: fashionwanderwear@gmail.com
             </Text>
             <Text style={styles.companyDetails}>Phone: +9476556435</Text>
           </View>
@@ -131,7 +131,7 @@ const Invoice = ({ expandedOrders }) => {
         {/* Footer Section */}
         <View style={styles.footer}>
           <Text style={styles.footerText}>
-            Thank you for choosing FashioNexus!
+            Thank you for choosing Fashion Wander Wear!
           </Text>
         </View>
       </Page>

@@ -356,7 +356,7 @@ function CreateInventory({ currentUser }) {
                   />
                   <span
                     key={`spn_${index}`}
-                    className="mx-2 inline-block bg-[#a98467] text-white px-2 py-1 rounded-full mr-2 mb-2"
+                    className="mx-2 inline-block bg-[#094371] text-white px-2 py-1 rounded-full mr-2 mb-2"
                   >
                     {size}
                   </span>

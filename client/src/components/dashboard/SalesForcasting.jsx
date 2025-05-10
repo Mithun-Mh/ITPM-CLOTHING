@@ -41,14 +41,14 @@ export default function SalesForcasting() {
   return (
     <motion.div
       className="p-10 pl-20 min-h-screen"
-      style={{ backgroundColor: "#f5ebe0" }} // PrimaryColor for background
+      style={{ backgroundColor: "#b8e2ff" }} // PrimaryColor for background
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
       <h1
         className="text-4xl font-bold mb-2"
-        style={{ color: "#a98467" }} // ExtraDarkColor for the main heading
+        style={{ color: "#094371" }} // ExtraDarkColor for the main heading
       >
         Sales Forcasting System
       </h1>
@@ -64,7 +64,7 @@ export default function SalesForcasting() {
           }`}
           style={{
             borderColor: activeTab === "auto" ? "#d4a373" : "transparent", // DarkColor for active tab border
-            color: activeTab === "auto" ? "#d4a373" : "#a98467", // DarkColor for active tab text, ExtraDarkColor for inactive
+            color: activeTab === "auto" ? "#d4a373" : "#094371", // DarkColor for active tab text, ExtraDarkColor for inactive
           }}
           onClick={() => setActiveTab("auto")}
         >
@@ -76,7 +76,7 @@ export default function SalesForcasting() {
           }`}
           style={{
             borderColor: activeTab === "manual" ? "#d4a373" : "transparent",
-            color: activeTab === "manual" ? "#d4a373" : "#a98467",
+            color: activeTab === "manual" ? "#d4a373" : "#094371",
           }}
           onClick={() => setActiveTab("manual")}
         >
