@@ -70,7 +70,7 @@ function DiscountTable() {
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#d4a373",
-      cancelButtonColor: "#a98467",
+      cancelButtonColor: "#094371",
       confirmButtonText: "Yes, delete it!",
     });
 

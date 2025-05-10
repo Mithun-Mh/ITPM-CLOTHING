@@ -156,7 +156,7 @@ export default function Profile() {
         <div className="bg-SecondaryColor p-6 rounded-xl mt-20 shadow-xl max-w-lg w-full">
           <h1
             className="text-3xl font-bold text-center mb-6"
-            style={{ color: "#a98467" }}
+            style={{ color: "#094371" }}
           >
             Profile
           </h1>
@@ -228,7 +228,7 @@ export default function Profile() {
 
             <button
               type="submit"
-              className="w-full bg-[#d4a373] text-white p-3 rounded-lg flex items-center justify-center hover:bg-[#a98467] transition duration-300"
+              className="w-full bg-[#d4a373] text-white p-3 rounded-lg flex items-center justify-center hover:bg-[#094371] transition duration-300"
               disabled={loading}
             >
               {loading ? (

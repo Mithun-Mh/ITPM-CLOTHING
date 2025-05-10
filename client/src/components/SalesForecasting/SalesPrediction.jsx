@@ -156,7 +156,7 @@ const SalesPrediction = () => {
     // Set font styles
     doc.setFont("helvetica", "bold");
     doc.setFontSize(16);
-    doc.setTextColor("#a98467");
+    doc.setTextColor("#094371");
 
     // Title
     doc.text("Sales Report", pageWidth / 2, margin + 25, { align: "center" });
@@ -178,7 +178,7 @@ const SalesPrediction = () => {
     );
 
     // Sales history table
-    doc.setTextColor("#a98467");
+    doc.setTextColor("#094371");
     doc.text("Sales History:", margin, margin + 72);
 
     const tableData = item.salesData.map((sale, index) => {
@@ -192,7 +192,7 @@ const SalesPrediction = () => {
       head: [["Month", "Sales"]],
       body: tableData,
       theme: "striped",
-      styles: { fillColor: "#f5ebe0", textColor: "#a98467", fontSize: 8 },
+      styles: { fillColor: "#f5ebe0", textColor: "#094371", fontSize: 8 },
       headStyles: { fillColor: "#d4a373", textColor: "#ffffff", fontSize: 8 },
       margin: { left: margin, right: margin },
       tableWidth: contentWidth,
@@ -295,7 +295,7 @@ const SalesPrediction = () => {
 
   return (
     <div className="container mx-auto p-4 bg-[#f5ebe0]">
-      <h1 className="text-2xl font-bold mb-6 text-[#a98467]">
+      <h1 className="text-2xl font-bold mb-6 text-[#094371]">
         Auto Forcasting
       </h1>
 
@@ -304,11 +304,11 @@ const SalesPrediction = () => {
         <input
           type="text"
           placeholder="Search by item name or ID"
-          className="w-full p-3 pl-10 border rounded-lg bg-[#e3d5ca] text-[#a98467] focus:outline-none focus:ring-2 focus:ring-[#d4a373]"
+          className="w-full p-3 pl-10 border rounded-lg bg-[#e3d5ca] text-[#094371] focus:outline-none focus:ring-2 focus:ring-[#d4a373]"
           value={searchTerm}
           onChange={handleSearch}
         />
-        <Search className="absolute left-3 top-3 text-[#a98467]" />
+        <Search className="absolute left-3 top-3 text-[#094371]" />
         <AnimatePresence>
           {showDropdown && searchTerm && (
             <motion.div
@@ -338,8 +338,8 @@ const SalesPrediction = () => {
           className="bg-[#e3d5ca] p-6 rounded-lg shadow-md"
         >
           <div className="flex items-center mb-2">
-            <BarChart2 className="mr-2 text-[#a98467]" />
-            <h2 className="text-xl font-semibold text-[#a98467]">
+            <BarChart2 className="mr-2 text-[#094371]" />
+            <h2 className="text-xl font-semibold text-[#094371]">
               Total Items
             </h2>
           </div>
@@ -352,8 +352,8 @@ const SalesPrediction = () => {
           className="bg-[#e3d5ca] p-6 rounded-lg shadow-md"
         >
           <div className="flex items-center mb-2">
-            <DollarSign className="mr-2 text-[#a98467]" />
-            <h2 className="text-xl font-semibold text-[#a98467]">
+            <DollarSign className="mr-2 text-[#094371]" />
+            <h2 className="text-xl font-semibold text-[#094371]">
               Overall Sales
             </h2>
           </div>
@@ -364,8 +364,8 @@ const SalesPrediction = () => {
           className="bg-[#e3d5ca] p-6 rounded-lg shadow-md"
         >
           <div className="flex items-center mb-2">
-            <TrendingUp className="mr-2 text-[#a98467]" />
-            <h2 className="text-xl font-semibold text-[#a98467]">
+            <TrendingUp className="mr-2 text-[#094371]" />
+            <h2 className="text-xl font-semibold text-[#094371]">
               Next Month Prediction
             </h2>
           </div>
@@ -421,19 +421,19 @@ const SalesPrediction = () => {
             className="bg-[#e3d5ca] p-6 rounded-lg shadow-md mb-6"
           >
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-2xl font-semibold text-[#a98467]">
+              <h2 className="text-2xl font-semibold text-[#094371]">
                 {selectedItem.itemName}
               </h2>
               <div>
                 <button
                   onClick={handleHideItem}
-                  className="bg-[#d4a373] text-white p-2 rounded-full hover:bg-[#a98467] transition-colors mr-2"
+                  className="bg-[#d4a373] text-white p-2 rounded-full hover:bg-[#094371] transition-colors mr-2"
                 >
                   <X size={20} />
                 </button>
                 <button
                   onClick={() => generateReport(selectedItem)}
-                  className="bg-[#d4a373] text-white p-2 rounded-full hover:bg-[#a98467] transition-colors"
+                  className="bg-[#d4a373] text-white p-2 rounded-full hover:bg-[#094371] transition-colors"
                 >
                   <Download size={20} />
                 </button>
@@ -443,7 +443,7 @@ const SalesPrediction = () => {
             <div className="flex flex-col md:flex-row">
               {/* Item Details */}
               <div className="w-full md:w-1/2 pr-4">
-                <h3 className="text-xl font-semibold mb-2 text-[#a98467]">
+                <h3 className="text-xl font-semibold mb-2 text-[#094371]">
                   Item Details
                 </h3>
                 <p className="text-[#d4a373]">Item ID: {selectedItem.itemId}</p>
@@ -457,7 +457,7 @@ const SalesPrediction = () => {
                   ].toFixed(2)}
                 </p>
                 {selectedItem.nextMonthPrediction && (
-                  <p className="text-[#a98467] font-bold bg-[#f5ebe0] p-2 rounded mt-2">
+                  <p className="text-[#094371] font-bold bg-[#f5ebe0] p-2 rounded mt-2">
                     Next Month Prediction: $
                     {selectedItem.nextMonthPrediction.toFixed(2)}
                   </p>
@@ -466,7 +466,7 @@ const SalesPrediction = () => {
 
               {/* Item History */}
               <div className="w-full md:w-1/2 mt-4 md:mt-0">
-                <h3 className="text-xl font-semibold mb-2 text-[#a98467]">
+                <h3 className="text-xl font-semibold mb-2 text-[#094371]">
                   Sales Historyy
                 </h3>
                 <div className="overflow-x-auto">
@@ -505,8 +505,8 @@ const SalesPrediction = () => {
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={getChartData(selectedItem)}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#d4a373" />
-                  <XAxis dataKey="month" stroke="#a98467" />
-                  <YAxis stroke="#a98467" />
+                  <XAxis dataKey="month" stroke="#094371 " />
+                  <YAxis stroke="#094371 " />
                   <Tooltip
                     contentStyle={{
                       backgroundColor: "#f5ebe0",
@@ -538,7 +538,7 @@ const SalesPrediction = () => {
       </AnimatePresence>
 
       {/* Items Overview */}
-      <h2 className="text-2xl font-semibold text-[#a98467] mt-6 mb-4">
+      <h2 className="text-2xl font-semibold text-[#094371 ] mt-6 mb-4">
         Item Overview
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

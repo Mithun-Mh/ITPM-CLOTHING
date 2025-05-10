@@ -147,7 +147,7 @@ const AddUserPopup = ({ closePopup, refreshUsers }) => {
             </div>
             <motion.button
               type="submit"
-              className="w-full bg-[#d4a373] text-white py-2 rounded-md hover:bg-[#a98467] transition duration-300 flex items-center justify-center"
+              className="w-full bg-[#d4a373] text-white py-2 rounded-md hover:bg-[#094371 ] transition duration-300 flex items-center justify-center"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               disabled={loading}

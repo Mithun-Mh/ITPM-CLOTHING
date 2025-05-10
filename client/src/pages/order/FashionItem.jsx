@@ -128,7 +128,7 @@ const FashionItem = () => {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-screen">
-        <TailSpin height="80" width="80" color="#a98467" ariaLabel="loading" />
+        <TailSpin height="80" width="80" color="#094371" ariaLabel="loading" />
       </div>
     );
   }
@@ -266,7 +266,7 @@ const FashionItem = () => {
         <div className="w-full lg:w-5/6 mt-16 mb-14">
           <h2
             className="text-2xl font-semibold mb-4"
-            style={{ color: "#a98467" }}
+            style={{ color: "#094371" }}
           >
             Recommended for You
           </h2>

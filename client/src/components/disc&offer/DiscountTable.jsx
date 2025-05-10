@@ -121,7 +121,7 @@ const DiscountTable = () => {
   };
 
   return (
-    <div className="p-6 bg-[#f5ebe0] text-[#775c41]">
+    <div className="p-6 bg-[#b8e2ff] text-[#775c41]">
       <div className="flex justify-between mb-4">
         <input
           type="text"
@@ -132,7 +132,7 @@ const DiscountTable = () => {
         />
         <button
           onClick={downloadReport}
-          className="bg-[#d4a373] text-white p-2 rounded hover:bg-[#a98467]"
+          className="bg-[#d4a373] text-white p-2 rounded hover:bg-[#094371]"
         >
           Download Report
         </button>
@@ -150,7 +150,7 @@ const DiscountTable = () => {
         </thead>
         <tbody>
           {filteredDiscounts.map((discount) => (
-            <tr key={discount._id} className="border-b hover:bg-[#f5ebe0]">
+            <tr key={discount._id} className="border-b hover:bg-[#b8e2ff]">
               <td className="p-2">{discount.title}</td>
               <td className="p-2">{discount.rate}%</td>
               <td className="p-2">
@@ -167,7 +167,7 @@ const DiscountTable = () => {
                 </button>
                 <button
                   onClick={() => handleViewMoreClick(discount)}
-                  className="bg-[#d4a373] text-white px-2 py-1 rounded hover:bg-[#a98467] mr-2"
+                  className="bg-[#d4a373] text-white px-2 py-1 rounded hover:bg-[#094371] mr-2"
                 >
                   View More
                 </button>

@@ -75,7 +75,7 @@ export default function InventoryManagement() {
           }`}
           style={{
             borderColor: activeTab === "add" ? "#094371" : "transparent",
-            color: activeTab === "add" ? "#d4a373" : "#a98467",
+            color: activeTab === "add" ? "#d4a373" : "#094371",
           }}
           onClick={() => setActiveTab("add")}
         >
