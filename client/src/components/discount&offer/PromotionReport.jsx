@@ -51,19 +51,19 @@ export default function PromotionReport({ promotions }, { searchData }) {
     const dateStr = date[1] + "-" + date[2] + "-" + date[3];
 
     doc.setFontSize(28).setFont("Mooli", "bold").setTextColor(65, 164, 255);
-    doc.text("FashioNexus", 80, 15);
+    doc.text("Fashion Wander Wear", 80, 15);
 
     doc.setFont("helvetica", "normal").setFontSize(20).setTextColor(0, 0, 0);
-    doc.text(`Promotion Details Report `, 75, 25);
+    doc.text(`Discount Details Report `, 75, 25);
 
     doc.setFont("times", "normal").setFontSize(15).setTextColor(100, 100, 100);
     doc.text(`Report Generated Date: ${dateStr}`, 65, 35);
 
-    doc
-      .setFont("courier", "normal")
-      .setFontSize(12)
-      .setTextColor(150, 150, 150);
-    doc.text("FashioNexus.co, Galle Road, Colombo, Sri lanka", 50, 45);
+    // doc
+    //   .setFont("courier", "normal")
+    //   .setFontSize(12)
+    //   .setTextColor(150, 150, 150);
+    // doc.text("FashioNexus.co, Galle Road, Colombo, Sri lanka", 50, 45);
 
     doc
       .setFont("courier", "normal")

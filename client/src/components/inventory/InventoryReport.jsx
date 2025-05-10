@@ -48,7 +48,7 @@ export default function InventoryReport({ inventory }) {
     logo.src = "../../assets/img/logo-removebg-preview.png";
 
     doc.setFontSize(28).setFont("Mooli", "bold").setTextColor(169, 132, 109);
-    doc.text("FashionWanderWear", 80, 15);
+    doc.text("Fashion Wander Wear", 80, 15);
 
     doc.setFont("helvetica", "normal").setFontSize(20).setTextColor(0, 0, 0);
     doc.text("Inventory Details Report", 65, 25);
@@ -56,11 +56,11 @@ export default function InventoryReport({ inventory }) {
     doc.setFont("times", "normal").setFontSize(15).setTextColor(100, 100, 100);
     doc.text(`Report Generated Date: ${dateStr}`, 65, 35);
 
-    doc
-      .setFont("courier", "normal")
-      .setFontSize(12)
-      .setTextColor(150, 150, 150);
-    doc.text("FashionWanderWear.co, Galle Road, Colombo, Sri lanka", 50, 45);
+    // doc
+    //   .setFont("courier", "normal")
+    //   .setFontSize(12)
+    //   .setTextColor(150, 150, 150);
+    // doc.text("FashionWanderWear.co, Galle Road, Colombo, Sri lanka", 50, 45);
 
     doc
       .setFont("courier", "normal")

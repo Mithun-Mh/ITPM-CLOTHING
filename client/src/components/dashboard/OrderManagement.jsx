@@ -295,7 +295,7 @@ export default function OrderManagement() {
             }`}
             style={{
               borderColor: activeTab === "all" ? "#d4a373" : "transparent", // DarkColor for active tab border
-              color: activeTab === "all" ? "#d4a373" : "#a98467", // DarkColor for active tab text, ExtraDarkColor for inactive
+              color: activeTab === "all" ? "#d4a373" : "#094371", // DarkColor for active tab text, ExtraDarkColor for inactive
             }}
             onClick={() => setActiveTab("all")}
           >
@@ -307,7 +307,7 @@ export default function OrderManagement() {
             }`}
             style={{
               borderColor: activeTab === "add" ? "#d4a373" : "transparent",
-              color: activeTab === "add" ? "#d4a373" : "#a98467",
+              color: activeTab === "add" ? "#d4a373" : "#094371",
             }}
             onClick={() => setActiveTab("add")}
           >

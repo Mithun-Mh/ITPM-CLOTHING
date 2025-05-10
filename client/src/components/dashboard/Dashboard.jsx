@@ -10,7 +10,7 @@ const data = {
     {
       label: "Sales",
       data: [300, 400, 200, 500, 700],
-      backgroundColor: "#a98467",
+      backgroundColor: "#b8e2ff",
     },
   ],
 };
