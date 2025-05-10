@@ -44,6 +44,8 @@ const AllUsers = () => {
   const fetchUsers = async () => {
     try {
       const response = await axios.get("/api/user/all-Users");
+      console.log("Full response:", response);         // Logs the entire response object
+      console.log("Response data:", response.data);
       setUsers(response.data);
       calculateUserCounts(response.data);
     } catch (error) {
@@ -122,7 +124,7 @@ const AllUsers = () => {
       .setFont("helvetica", "normal")
       .setFontSize(28)
       .setTextColor(169, 132, 109);
-    doc.text("Fashio Wander Wear", 105, 20, { align: "center" });
+    doc.text("Fashion Wander Wear", 105, 20, { align: "center" });
 
     doc.setFont("helvetica", "normal").setFontSize(18).setTextColor(0, 0, 0);
     doc.text("User Details Report", 105, 30, { align: "center" });

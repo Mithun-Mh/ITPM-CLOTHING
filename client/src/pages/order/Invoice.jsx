@@ -21,7 +21,7 @@ const Invoice = ({ expandedOrders }) => {
         {/* Header Section */}
         <View style={styles.header}>
           {/* Logo */}
-          <Image src={logoBase64} style={styles.logo} />
+          {/* <Image src={logoBase64} style={styles.logo} /> */}
 
           {/* Company Details */}
           <View style={styles.companyInfo}>

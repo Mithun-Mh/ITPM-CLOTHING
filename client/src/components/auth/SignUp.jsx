@@ -6,6 +6,8 @@ import OtpValidationPopup from "./OtpValidationPopup";
 
 export default function SignUp({ onClose, onSignIn }) {
   const [formData, setFormData] = useState({
+    firstname: "",
+    lastname: "",
     email: "",
     username: "",
     password: "",
@@ -137,6 +139,8 @@ export default function SignUp({ onClose, onSignIn }) {
   };
 
   const inputFields = [
+    { name: "firstname", type: "name", placeholder: "First Name", icon: FaUser },
+    { name: "lastname", type: "name", placeholder: "Last Name", icon: FaUser },
     { name: "email", type: "email", placeholder: "Email", icon: FaEnvelope },
     { name: "username", type: "text", placeholder: "Username", icon: FaUser },
     {
