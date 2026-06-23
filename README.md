@@ -1,9 +1,9 @@
-# 🛍️ FashioNexus - Sales Forecasting and Optimization for Fashion Retail
+# 🛍️ Fashion Wander Wear - Sales Forecasting and Optimization for Fashion Retail
 
 **An AI-Powered Solution to Optimize Sales, Inventory, and Order Management**  
 FashioNexus is a powerful, AI-driven platform for fashion retailers. Built on the MERN stack with Firebase Authentication, Flask, and Python-based machine learning models, it leverages predictive analytics to enhance decision-making, streamline operations, and boost sales.
 
-![FashioNexus Banner](https://your-image-url.com/banner.png) <!-- Replace with your image URL or animation -->
+![Fashion Wander Wear  Banner](https://your-image-url.com/banner.png) <!-- Replace with your image URL or animation -->
 
 ---
 
